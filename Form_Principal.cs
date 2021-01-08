@@ -16,31 +16,12 @@ namespace Cadastro_de_Alunos
         {
             InitializeComponent();
         }
-
-                    
-
+           
         private void cbCad_uf_SelectedIndexChanged(object sender, EventArgs e)
         {
             sisDBADM obj = new sisDBADM();
             cbCad_cidade.DataSource = obj.listaCidade(cbCad_uf.Text);
             cbCad_cidade.DisplayMember = "nome";
-        }
-
-
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -60,13 +41,8 @@ namespace Cadastro_de_Alunos
             sisDBADM obj = new sisDBADM();
             dgExclui.DataSource = obj.listarGrid();
         }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //este método abaixo é do botão insert
+    
+        //botão insert
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
             sisDBADM obj = new sisDBADM();
@@ -95,8 +71,7 @@ namespace Cadastro_de_Alunos
             catch (Exception erro)
             {
                 MessageBox.Show(erro + "Erro ocorrido");
-            }
-            //testeDBinsert();
+            }          
         }
         
         //Método atualizar --update
@@ -161,10 +136,6 @@ namespace Cadastro_de_Alunos
             }
         }
 
-        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         //botao pesquisar 
         private void toolStripButton9_Click(object sender, EventArgs e)
